@@ -191,7 +191,7 @@ Your continued use of the App after any changes constitutes your acceptance of t
 
 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
 
-**Email:** support@i-view.app
+**Email:** iviewhelpcenter@gmail.com
 
 ---
 
