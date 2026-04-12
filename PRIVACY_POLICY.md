@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Last Updated:** April 8, 2026
+**Last Updated:** April 12, 2026
 
-**i-View** ("we," "our," or "us") operates the i-View mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you consent to the practices described herein.
+**OneColor** ("we," "our," or "us") operates the OneColor mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you consent to the practices described herein.
 
 ---
 
@@ -22,10 +22,10 @@ When you create an account or use our services, we collect the following:
 - First name and last name
 - Gender (male/female)
 - Age
-- Profile photo (optional)
+- Profile photo (optional, limited to 512 KB)
 - Bio (optional)
 
-**Location Information:**
+**Location Information (User-Provided):**
 - Address (optional)
 - City
 - State
@@ -38,18 +38,61 @@ When you create an account or use our services, we collect the following:
 - Last blood donation date (month and year)
 - Blood donation history (donation type, date, location, notes)
 
+**Posts & Community Content:**
+- Text content of posts you create
+- Blood request posts (blood group needed, component type, urgency level, hospital/location, units needed)
+- Comments on posts
+- Messages sent through in-app chat (including shared posts)
+
 ### 1.2 Information Collected Automatically
 
 When you use the App, we may automatically collect:
 
 - **Device Information:** Device model, operating system and version, platform (iOS/Android)
 - **App Version:** The version of the App you are using
+- **Timezone:** Your device's timezone (detected via your device settings)
+- **IP-Based Geolocation:** Your approximate city, state/region, and country (derived from your IP address using the ipapi.co service)
+- **Push Notification Token:** A unique device identifier for delivering push notifications (only if you grant notification permission)
 - **Error & Crash Data:** Error messages, stack traces, and diagnostic information to improve App stability
 - **Usage Data:** Interactions within the App such as screens viewed and features used
 
-### 1.3 Information from Third Parties
+### 1.3 Why We Collect Location, IP Address, and Timezone Data
 
-We use **Supabase** as our backend service provider for authentication and data storage. When you sign up or log in, Supabase processes your authentication credentials in accordance with their privacy policy.
+OneColor is a **life-saving blood donation platform**. Accurate location data is not a convenience — it is a **critical necessity**. Here is why:
+
+**🚨 Emergency Response Accuracy:**
+When someone creates an urgent or critical blood request, the App must immediately identify eligible donors **in the same city**. Inaccurate location data could mean notifications reach donors hundreds of kilometres away while nearby donors who could save a life are never alerted. In blood donation emergencies, every minute matters — location precision directly impacts whether a patient receives blood in time.
+
+**🩸 Donor-Recipient Matching:**
+Blood donation requires physical presence. A donor in Toronto cannot help a recipient in Vancouver. We use your IP-based location to verify and auto-fill your city, state, and country during registration so that the matching system works accurately from day one — even before you manually enter your address.
+
+**📍 Original Location vs. Current Location:**
+We store both your **self-reported location** (city, state, country you enter during signup) and your **IP-detected original location** at the time of registration. This helps us:
+- Detect if a user's stated location significantly differs from their actual region, which could indicate data entry errors
+- Ensure donors are discoverable in the correct geographic area
+- Maintain data integrity for the matching algorithms that people's lives depend on
+
+**🕐 Timezone Detection:**
+Your device timezone helps us:
+- Display donation history, post timestamps, and eligibility countdowns in your local time
+- Calculate accurate donation eligibility windows (e.g., "you can donate again in 12 days") based on your local date
+- Send push notifications at appropriate hours rather than disturbing donors in the middle of the night
+
+**🔒 Fraud & Safety:**
+IP-based location helps us detect suspicious activity such as multiple accounts created from different regions, which could indicate misuse of the platform. This protects genuine donors and recipients from fraudulent requests.
+
+**Important:** We do **not** use GPS or fine-grained device location services. We only derive approximate city-level location from your IP address, which does not require any device permission. This approach balances the life-saving need for location accuracy with your right to privacy.
+
+### 1.4 Information from Third Parties
+
+We use the following third-party services that may process your data:
+
+| Service | What It Provides | Data It Receives |
+|---|---|---|
+| **Supabase** | Authentication, database, file storage, real-time messaging | Account data, profile data, medical data, messages, posts |
+| **ipapi.co** | IP-based geolocation | Your IP address (returns approximate city/region/country) |
+| **Expo Push Notification Service** | Push notification delivery | Device push token, notification content |
+| **Expo / React Native** | App framework and build infrastructure | Device info, crash reports |
 
 ---
 
@@ -57,14 +100,19 @@ We use **Supabase** as our backend service provider for authentication and data 
 
 We use the information we collect for the following purposes:
 
-- **To Provide Our Services:** Connect blood donors with those in need based on blood group, location, and eligibility
+- **Donor-Recipient Matching:** Connect blood donors with those in need based on blood group, geographic location, and donation eligibility — this is the core life-saving function of the App
+- **Blood Request Alerts:** When a user creates an urgent or critical blood request, we use blood group and city data to identify matching donors and send them push notifications and in-app alerts
 - **Account Management:** Create and manage your user account, authenticate your identity
-- **Donor Matching:** Display your blood group, city, and donation eligibility to other registered users searching for donors
-- **Communication:** Send follow requests, contact requests, and notifications within the App
-- **Eligibility Tracking:** Calculate and display your blood donation eligibility based on your donation history and medical information
+- **Community Feed:** Display posts, blood request posts, reposts, and comments to the community
+- **Help Offer Tracking:** Record when donors offer help on blood request posts, and display the count of helpers to the community
+- **Messaging:** Enable direct messaging between users, including sharing posts in conversations
+- **Follow System:** Allow users to follow donors and receive updates
+- **Contact Requests:** Manage contact information sharing — your phone and email are only revealed after you explicitly accept a contact request
+- **Eligibility Tracking:** Calculate and display your blood donation eligibility based on your donation history and medical information, following Canadian Blood Services guidelines
 - **Safety & Compliance:** Ensure users meet minimum eligibility criteria (age 18–65, weight ≥45 kg, no permanent deferrals)
-- **Error Logging & Diagnostics:** Log application errors with associated device and user context to diagnose and fix issues
-- **App Improvement:** Analyze usage patterns and error data to improve the App's performance, features, and user experience
+- **Error Logging & Diagnostics:** Log application errors with associated device info, user context (user ID, email, role), platform, and app version to diagnose and fix issues
+- **App Improvement:** Analyze error patterns and usage data to improve the App's reliability, performance, and features
+- **Location Verification:** Cross-reference IP-detected location with user-provided location for data accuracy and fraud prevention
 - **Legal Compliance:** Comply with applicable laws, regulations, and legal processes
 
 ---
@@ -82,16 +130,19 @@ When you register as a blood donor, the following information may be visible to 
 - Gender
 - Profile photo (if uploaded)
 - Bio (if provided)
+- Posts and blood request posts you create (including urgency, blood group needed, component, hospital, and units)
+- Number of people who offered help on your blood request posts
+- Your follower and following counts
 
-**Your email address and phone number are only shared** with users whose contact requests you have explicitly accepted.
+**Your email address and phone number are NEVER publicly visible.** They are only shared with users whose contact requests you have **explicitly accepted**.
 
 ### 3.2 With Service Providers
 
-We use the following third-party service providers:
-
 | Provider | Purpose | Data Shared |
 |---|---|---|
-| **Supabase** | Authentication, database, and file storage | Account data, profile data, medical data |
+| **Supabase** | Authentication, database, real-time messaging, and file storage | Account data, profile data, medical data, posts, messages, notifications |
+| **ipapi.co** | IP-based geolocation during registration and location auto-fill | Your IP address (we do not store your IP; only the derived city/region/country) |
+| **Expo Push Notification Service** | Delivering push notifications to your device | Device push token, notification title and body |
 | **Expo / React Native** | App framework and build services | Device info, crash reports |
 
 ### 3.3 For Legal Reasons
@@ -105,79 +156,115 @@ We may disclose your information if required to do so by law or in the good fait
 
 ### 3.4 We Do NOT
 
-- Sell your personal information to third parties
-- Share your medical/health data with advertisers
-- Use your data for targeted advertising
+- Sell your personal information to third parties — **ever**
+- Share your medical/health data with advertisers or marketing companies
+- Use your data for targeted advertising or ad profiling
 - Share your data with data brokers
+- Use your location data for advertising or commercial purposes unrelated to blood donation
+- Store your IP address beyond the initial geolocation lookup
 
 ---
 
-## 4. Data Storage and Security
+## 4. Push Notifications
 
-- All data is stored securely on **Supabase** cloud infrastructure with encryption at rest and in transit
-- Passwords are hashed and never stored in plain text
-- We implement Row Level Security (RLS) policies to ensure users can only access authorized data
-- Access to medical and health data is restricted to the user and explicitly authorized parties
-- We use HTTPS/TLS for all data transmission
-- Error logs are stored securely and accessible only to authorized personnel
+We use **Expo Push Notification Service** to send you important alerts. Notifications may include:
+
+- **🚨 Blood Request Alerts:** When someone in your city creates an urgent or critical blood request matching your blood group, you will receive a push notification so you can respond quickly
+- **Contact Request Updates:** When someone requests your contact information or when your request is accepted/declined
+- **Follow Notifications:** When someone follows you
+- **In-App Notifications:** All notifications are also stored in-app and visible in your Notifications screen
+
+**You are in control:**
+- Push notifications require your **explicit permission** — we request notification access and respect your choice if you decline
+- You can disable push notifications at any time through your device's Settings
+- In-app notifications will continue to work even if push notifications are disabled
+- We only send notifications that are directly relevant to blood donation activity — we will **never** send marketing or promotional push notifications
+
+**Push Token:**
+When you grant notification permission, your device generates a unique push token. This token is stored in our database and used solely to deliver notifications to your specific device. It cannot be used to identify you personally, track your location, or access any other data on your device.
+
+---
+
+## 5. Data Storage and Security
+
+- All data is stored securely on **Supabase** cloud infrastructure with **encryption at rest and in transit**
+- Passwords are **hashed** using industry-standard algorithms and never stored in plain text
+- We implement **Row Level Security (RLS)** policies at the database level to ensure users can only access their own data
+- Medical and health data is protected by RLS — only you can view your full medical profile; other users see only your blood group and eligibility status
+- All API communication uses **HTTPS/TLS encryption**
+- Profile photos are stored in a secure storage bucket with access policies — you can only upload/modify your own avatar
+- Error logs are stored securely and accessible only to authorized development personnel
+- Chat messages are encrypted in transit and stored with row-level access controls — only conversation participants can read messages
+- Push notification tokens are stored securely and used only for notification delivery
 
 While we strive to use commercially acceptable means to protect your personal information, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.
 
 ---
 
-## 5. Your Rights and Choices
+## 6. Your Rights and Choices
 
 You have the following rights regarding your personal information:
 
-- **Access:** View your personal data through your profile in the App
-- **Update:** Edit your profile, medical, and location information at any time
-- **Delete:** Request deletion of your account and associated data by contacting us
-- **Withdraw Consent:** Stop using the App at any time; decline follow/contact requests
+- **Access:** View all your personal data through your profile in the App
+- **Update:** Edit your profile, medical information, location, and avatar at any time
+- **Delete:** Request complete deletion of your account and all associated data by contacting us
+- **Withdraw Consent:** Stop using the App at any time; decline follow and contact requests
+- **Notification Control:** Enable or disable push notifications at any time through your device settings
+- **Contact Privacy:** Your phone number and email are hidden by default and only shared when you explicitly accept a contact request
 - **Data Portability:** Request a copy of your personal data in a structured format
+- **Photo Removal:** Delete your profile photo at any time through the App
 
-To exercise any of these rights, please contact us at the email provided in Section 11.
+To exercise any of these rights, please contact us at the email provided in Section 12.
 
 ---
 
-## 6. Data Retention
+## 7. Data Retention
 
 - We retain your personal information for as long as your account is active
-- If you delete your account, we will delete or anonymize your personal data within 30 days, except where we are required to retain it for legal or regulatory purposes
-- Error logs are retained for up to 90 days for diagnostic purposes, after which they are automatically deleted
-- Donation history records may be retained in anonymized form for statistical purposes
+- If you delete your account, we will delete or anonymize your personal data within **30 days**, except where we are required to retain it for legal or regulatory purposes
+- Error logs are retained for up to **90 days** for diagnostic purposes, after which they are automatically deleted
+- Push notification tokens are deleted immediately when your account is deleted
+- Notification records (blood request alerts, follow notifications) are deleted with your account
+- Chat messages in conversations you participated in will be anonymized upon account deletion
+- Donation history records may be retained in anonymized form for statistical and public health research purposes
+- Blood request posts may remain visible (with author anonymized) if other users interacted with them
 
 ---
 
+## 8. Children's Privacy
 
-## 7. Children's Privacy
-
-Our App is **not intended for children under the age of 18**. We do not knowingly collect personal information from anyone under 18 years of age. The App enforces a minimum age of 18 during registration. If we discover that we have inadvertently collected data from a child under 18, we will promptly delete that information.
+Our App is **not intended for children under the age of 18**. We do not knowingly collect personal information from anyone under 18 years of age. The App enforces a minimum age of 18 during registration in compliance with blood donation eligibility requirements. If we discover that we have inadvertently collected data from a child under 18, we will promptly delete that information and the associated account.
 
 ---
 
-## 8. Health Data (Sensitive Information)
+## 9. Health Data (Sensitive Information)
 
 We collect health and medical information (blood group, donation history, eligibility status, weight) solely for the purpose of:
 
-- Determining your eligibility to donate blood
-- Matching you with compatible blood recipients
-- Tracking safe donation intervals
+- **Determining your eligibility to donate blood** — based on Canadian Blood Services guidelines including waiting periods between different donation types (whole blood, plasma, platelets, double red cell)
+- **Matching you with compatible blood recipients** — when someone needs a specific blood type, we match them with eligible donors in their area
+- **Tracking safe donation intervals** — our eligibility engine calculates cross-type waiting periods to protect donor health (e.g., 56 days after whole blood before plasma donation)
+- **Sending targeted blood request alerts** — when a critical request matches your blood group and city, we notify you so you can help save a life
+- **Preventing unsafe donations** — checking for permanent deferrals, minimum weight (≥45 kg), and age range (18–65)
 
 This health data is:
-- Stored securely with restricted access
-- Never shared with advertisers or data brokers
-- Only visible to other users in limited form (blood group and eligibility status)
-- Protected by Row Level Security policies at the database level
+- Stored securely with restricted access via Row Level Security
+- **Never shared** with advertisers, data brokers, or any commercial third party
+- Only visible to other users in limited form (blood group and eligibility status — not weight, donation dates, or deferral details)
+- Protected by database-level access policies ensuring only the data owner can read their full medical record
+- Used exclusively for the life-saving purposes described above
 
 ---
 
-## 9. International Data Transfers
+## 10. International Data Transfers
 
-Your information may be transferred to and maintained on servers located outside your country of residence. By using the App, you consent to the transfer of your information to countries that may have different data protection laws than your country.
+Your information may be transferred to and maintained on servers located outside your country of residence. Supabase infrastructure may be hosted in regions that include the United States, European Union, and Asia-Pacific. By using the App, you consent to the transfer of your information to countries that may have different data protection laws than your country.
+
+We ensure that any such transfer is protected by appropriate safeguards including encryption in transit and at rest, and contractual obligations with our service providers.
 
 ---
 
-## 10. Changes to This Privacy Policy
+## 11. Changes to This Privacy Policy
 
 We may update this Privacy Policy from time to time. We will notify you of any changes by:
 - Updating the "Last Updated" date at the top of this policy
@@ -187,25 +274,32 @@ Your continued use of the App after any changes constitutes your acceptance of t
 
 ---
 
-## 11. Contact Us
+## 12. Contact Us
 
 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
 
-**Email:** iviewhelpcenter@gmail.com
+**Email:** onecolorhelpcenter@gmail.com
 
 ---
 
-## 12. Compliance
+## 13. Compliance
 
 This Privacy Policy is designed to comply with:
 - **Apple App Store Guidelines** (Section 5.1 — Privacy)
 - **Google Play Store Policies** (User Data policy)
 - **General Data Protection Regulation (GDPR)** — for users in the European Union
 - **California Consumer Privacy Act (CCPA)** — for users in California
+- **Personal Information Protection and Electronic Documents Act (PIPEDA)** — for users in Canada
 - **Information Technology Act, 2000** and **SPDI Rules, 2011** — for users in India
 
 ---
 
-## 13. Consent
+## 14. Consent
 
-By creating an account and using the i-View App, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. You explicitly consent to the collection and processing of your health/medical data for the purposes described herein.
+By creating an account and using the OneColor App, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. You explicitly consent to:
+
+- The collection and processing of your health/medical data for blood donation matching and eligibility purposes
+- The collection of your IP-based geolocation for accurate donor-recipient matching and location verification
+- The collection of your device timezone for accurate time-based calculations
+- The delivery of push notifications related to blood donation requests (if you grant notification permission)
+- The storage and processing of your data on servers that may be located outside your country of residence
