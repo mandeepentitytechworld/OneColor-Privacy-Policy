@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated:** April 12, 2026
+**Last Updated:** April 13, 2026
 
 **OneColor** ("we," "our," or "us") operates the OneColor mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you consent to the practices described herein.
 
@@ -43,6 +43,17 @@ When you create an account or use our services, we collect the following:
 - Blood request posts (blood group needed, component type, urgency level, hospital/location, units needed)
 - Comments on posts
 - Messages sent through in-app chat (including shared posts)
+- Repost content and accompanying text
+
+**Support Tickets & Communication:**
+- Support ticket messages and descriptions
+- Conversation messages between you and administrators on support tickets
+- Ticket status history (open, resolved, closed, reopened)
+
+**Activity & Integrity Logs:**
+- Blood group change history — all attempts, whether successful, blocked, or resulting in account restrictions (tracked for fraud prevention)
+- Account lock and unlock events and reasons
+- Admin action notes associated with ticket status changes
 
 ### 1.2 Information Collected Automatically
 
@@ -110,6 +121,10 @@ We use the information we collect for the following purposes:
 - **Contact Requests:** Manage contact information sharing — your phone and email are only revealed after you explicitly accept a contact request
 - **Eligibility Tracking:** Calculate and display your blood donation eligibility based on your donation history and medical information, following Canadian Blood Services guidelines
 - **Safety & Compliance:** Ensure users meet minimum eligibility criteria (age 18–65, weight ≥45 kg, no permanent deferrals)
+- **Content Moderation:** Automatically filter and block abusive, offensive, threatening, discriminatory, sexual, or otherwise inappropriate language across all user-generated text in the App — including posts, comments, messages, profile fields, support tickets, and repost captions. This includes detection of profanity in multiple languages (English, Hindi/Urdu), hate speech, slurs, violent threats, explicit content, offensive emojis, and evasion attempts using character substitution (leetspeak)
+- **Account Integrity & Restrictions:** Monitor blood group change attempts to prevent fraud. Accounts may be automatically locked if suspicious activity is detected (e.g., repeated blood group change attempts). Locked accounts have restricted access — users can view the feed in read-only mode and communicate with administrators through the support ticket system
+- **Support Ticket Management:** Process, track, and respond to user support tickets. Administrators can view your account information, profile data, medical history, and activity logs to investigate and resolve issues. Ticket conversations (messages between you and administrators) are stored and used for support purposes
+- **Blood Group Change Logging:** Log all blood group change attempts — including the previous value, new value, whether the change was successful or blocked, and the timestamp — exclusively for fraud prevention and platform integrity
 - **Error Logging & Diagnostics:** Log application errors with associated device info, user context (user ID, email, role), platform, and app version to diagnose and fix issues
 - **App Improvement:** Analyze error patterns and usage data to improve the App's reliability, performance, and features
 - **Location Verification:** Cross-reference IP-detected location with user-provided location for data accuracy and fraud prevention
@@ -201,7 +216,146 @@ While we strive to use commercially acceptable means to protect your personal in
 
 ---
 
-## 6. Your Rights and Choices
+## 6. Content Moderation & Filtering
+
+To maintain a safe, respectful, and inclusive community, OneColor employs **automated content filtering** on all user-generated text submitted within the App. This applies to:
+
+- Posts and blood request posts
+- Comments on posts
+- Direct messages (chat)
+- Repost captions
+- Profile fields (name, bio, designation, address)
+- Support ticket messages and conversation replies
+
+### What is filtered:
+
+| Category | Examples |
+|---|---|
+| **Profanity & vulgar language** | Common English and Hindi/Urdu profanity, including transliterations |
+| **Hate speech & slurs** | Racial, ethnic, religious, homophobic, transphobic, and ableist slurs |
+| **Sexual & explicit content** | Sexually explicit language, solicitations, and references |
+| **Threats & violence** | Death threats, self-harm encouragement, violent language |
+| **Drug references** | References to illegal substances |
+| **Offensive emojis** | Emojis commonly used in abusive or sexual contexts (e.g., 🖕, 🔫) |
+| **Evasion attempts** | Leetspeak and character substitution (e.g., "f*ck," "sh1t," "@ss") |
+
+### How it works:
+
+- Content is checked **at the point of submission** — before it is stored or visible to others
+- If restricted content is detected, the submission is **blocked** and the user is shown a message: *"Your message contains inappropriate content. Please revise and try again."*
+- The original text is **not stored** when blocked
+- Content filtering applies equally to all users, including administrators
+- The filter does not read or scan content after it has been successfully submitted
+
+### Important notes:
+
+- Automated filtering may occasionally flag content incorrectly (false positives). If you believe your content was blocked in error, you can revise your wording and resubmit
+- Repeated attempts to submit restricted content may be considered a violation of community guidelines and could result in account restrictions
+- We do not use content filtering data for advertising, profiling, or any purpose other than community safety
+
+---
+
+## 7. Account Restrictions & Locking
+
+OneColor may restrict or lock user accounts to protect the integrity of the platform and the safety of its community.
+
+### When accounts may be locked:
+
+- **Automatic locking**: If a user attempts to change their blood group beyond the permitted limit, the account is automatically locked to prevent potential fraud
+- **Administrator action**: Administrators may lock accounts that violate community guidelines or exhibit suspicious behavior
+
+### What happens when an account is locked:
+
+| Feature | Available? |
+|---|---|
+| Log in to the App | ✅ Yes |
+| View the community feed | ✅ Yes (read-only — no posting, commenting, liking, sharing, or visiting other profiles) |
+| Create support tickets | ✅ Yes (one open ticket at a time) |
+| Communicate with administrators via ticket conversations | ✅ Yes |
+| View ticket-related notifications | ✅ Yes |
+| Access privacy policy | ✅ Yes |
+| Sign out | ✅ Yes |
+| Create posts, comments, or messages | ❌ No |
+| Visit other user profiles | ❌ No |
+| Access search, chat, settings, followers, leaderboard | ❌ No |
+
+### How accounts are unlocked:
+
+- Locked users can communicate with administrators through the support ticket system
+- An administrator reviews the case and may unlock the account
+- When an account is unlocked, the App **automatically detects the change** (within approximately 10 seconds) and restores full access without requiring the user to log out or restart the App
+- The associated support ticket is automatically resolved when an account is unlocked
+
+### One-ticket limit:
+
+Locked users can have **only one open support ticket at a time**. To create a new ticket, the existing ticket must first be resolved or closed. This ensures focused, efficient communication between the user and administrators.
+
+---
+
+## 8. Support Ticket System
+
+OneColor provides an in-app support ticket system for users to communicate with administrators.
+
+### What is collected:
+
+- Your contact information (email, username, phone) submitted with the ticket — verified against your registered account information
+- The text of your support ticket message
+- All conversation messages exchanged between you and administrators on the ticket
+- Ticket status changes (open, resolved, closed, reopened) with timestamps
+
+### What administrators can see:
+
+When reviewing your support ticket, authorized administrators can view:
+- Your account information (username, email, phone, role, account status, blood group change count)
+- Your profile information (name, gender, date of birth, bio, designation)
+- Your location information (address, city, state, country)
+- Your medical information (blood group, age, weight, deferral status)
+- The full conversation thread on your ticket
+
+This information is used **solely for the purpose of investigating and resolving your support request**.
+
+### Ticket conversations:
+
+- Both users and administrators can send messages on open tickets
+- Administrator actions (resolve, close, reopen, lock, unlock) are logged as messages in the conversation thread for transparency
+- Action messages are prefixed with the action type (e.g., "[Resolved]", "[Account unlocked]") so you know what action was taken and why
+- Messages are limited to 500 characters each
+- A reply/action note is **required** from both administrators and users before taking any status action on a ticket
+
+### Ticket statuses:
+
+| Status | Meaning |
+|---|---|
+| **Open** | Active — conversation enabled, awaiting resolution |
+| **Resolved** | The issue has been fixed — no further action needed |
+| **Closed** | The ticket has been closed without resolution — the matter is dropped |
+
+---
+
+## 9. Blood Group Change Logging
+
+For **safety and fraud prevention**, OneColor logs all blood group change attempts. Blood group is a critical medical field that directly affects donor-recipient matching, and fraudulent changes could endanger lives.
+
+### What is logged:
+
+| Field | Description |
+|---|---|
+| Previous blood group | The blood group before the change attempt |
+| New blood group | The requested new blood group |
+| Change type | `successful` (change applied), `blocked_donated` (rejected — user has donation history), `blocked_limit` (rejected — admin change limit reached), `locked_account` (change triggered account lock) |
+| Timestamp | When the attempt occurred |
+
+### How this data is used:
+
+- To detect and prevent fraudulent blood group changes
+- To enforce change limits (regular users: limited changes; admins: one change per user)
+- To automatically lock accounts that exhibit suspicious change patterns
+- This data is accessible **only to administrators** through the Users Log and support ticket investigation tools
+- Blood group change logs are **never shared** with other users or third parties
+
+---
+
+## 10. Your Rights and Choices
 
 You have the following rights regarding your personal information:
 
@@ -213,31 +367,34 @@ You have the following rights regarding your personal information:
 - **Contact Privacy:** Your phone number and email are hidden by default and only shared when you explicitly accept a contact request
 - **Data Portability:** Request a copy of your personal data in a structured format
 - **Photo Removal:** Delete your profile photo at any time through the App
+- **Support:** Contact administrators through the in-app support ticket system for any account-related concerns
 
-To exercise any of these rights, please contact us at the email provided in Section 12.
+To exercise any of these rights, please contact us at the email provided in Section 16.
 
 ---
 
-## 7. Data Retention
+## 11. Data Retention
 
 - We retain your personal information for as long as your account is active
 - If you delete your account, we will delete or anonymize your personal data within **30 days**, except where we are required to retain it for legal or regulatory purposes
 - Error logs are retained for up to **90 days** for diagnostic purposes, after which they are automatically deleted
 - Push notification tokens are deleted immediately when your account is deleted
-- Notification records (blood request alerts, follow notifications) are deleted with your account
+- Notification records (blood request alerts, follow notifications, ticket notifications) are deleted with your account
 - Chat messages in conversations you participated in will be anonymized upon account deletion
+- Support ticket messages and conversation threads are deleted with your account
+- Blood group change logs are retained for the lifetime of the account for integrity purposes and deleted upon account deletion
 - Donation history records may be retained in anonymized form for statistical and public health research purposes
 - Blood request posts may remain visible (with author anonymized) if other users interacted with them
 
 ---
 
-## 8. Children's Privacy
+## 12. Children's Privacy
 
 Our App is **not intended for children under the age of 18**. We do not knowingly collect personal information from anyone under 18 years of age. The App enforces a minimum age of 18 during registration in compliance with blood donation eligibility requirements. If we discover that we have inadvertently collected data from a child under 18, we will promptly delete that information and the associated account.
 
 ---
 
-## 9. Health Data (Sensitive Information)
+## 13. Health Data (Sensitive Information)
 
 We collect health and medical information (blood group, donation history, eligibility status, weight) solely for the purpose of:
 
@@ -256,7 +413,7 @@ This health data is:
 
 ---
 
-## 10. International Data Transfers
+## 14. International Data Transfers
 
 Your information may be transferred to and maintained on servers located outside your country of residence. Supabase infrastructure may be hosted in regions that include the United States, European Union, and Asia-Pacific. By using the App, you consent to the transfer of your information to countries that may have different data protection laws than your country.
 
@@ -264,7 +421,7 @@ We ensure that any such transfer is protected by appropriate safeguards includin
 
 ---
 
-## 11. Changes to This Privacy Policy
+## 15. Changes to This Privacy Policy
 
 We may update this Privacy Policy from time to time. We will notify you of any changes by:
 - Updating the "Last Updated" date at the top of this policy
@@ -274,19 +431,21 @@ Your continued use of the App after any changes constitutes your acceptance of t
 
 ---
 
-## 12. Contact Us
+## 16. Contact Us
 
 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
 
 **Email:** onecolorhelpcenter@gmail.com
 
+You can also reach us through the **in-app support ticket system** (available under "Contact Support" in the App menu).
+
 ---
 
-## 13. Compliance
+## 17. Compliance
 
 This Privacy Policy is designed to comply with:
-- **Apple App Store Guidelines** (Section 5.1 — Privacy)
-- **Google Play Store Policies** (User Data policy)
+- **Apple App Store Guidelines** (Section 5.1 — Privacy, Section 5.6 — Developer Code of Conduct)
+- **Google Play Store Policies** (User Data policy, Inappropriate Content policy)
 - **General Data Protection Regulation (GDPR)** — for users in the European Union
 - **California Consumer Privacy Act (CCPA)** — for users in California
 - **Personal Information Protection and Electronic Documents Act (PIPEDA)** — for users in Canada
@@ -294,7 +453,7 @@ This Privacy Policy is designed to comply with:
 
 ---
 
-## 14. Consent
+## 18. Consent
 
 By creating an account and using the OneColor App, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. You explicitly consent to:
 
@@ -303,3 +462,7 @@ By creating an account and using the OneColor App, you acknowledge that you have
 - The collection of your device timezone for accurate time-based calculations
 - The delivery of push notifications related to blood donation requests (if you grant notification permission)
 - The storage and processing of your data on servers that may be located outside your country of residence
+- Automated content moderation and filtering of all user-generated text for community safety
+- Account restrictions (including read-only mode and limited feature access) in response to policy violations or suspicious activity
+- The logging of blood group change attempts for fraud prevention purposes
+- Administrator access to your account and profile data when investigating support tickets
