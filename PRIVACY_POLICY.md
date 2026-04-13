@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated:** April 13, 2026
+**Last Updated:** April 12, 2026
 
 **OneColor** ("we," "our," or "us") operates the OneColor mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you consent to the practices described herein.
 
@@ -52,7 +52,9 @@ When you create an account or use our services, we collect the following:
 
 **Activity & Integrity Logs:**
 - Blood group change history — all attempts, whether successful, blocked, or resulting in account restrictions (tracked for fraud prevention)
-- Account lock and unlock events and reasons
+- Content violation count — the number of times content was blocked by the automated filter (tracked per account, reset to zero on unlock)
+- Account lock reason — a predefined reason explaining why the account was locked (e.g., profanity violations or blood group fraud)
+- Account lock and unlock events
 - Admin action notes associated with ticket status changes
 
 ### 1.2 Information Collected Automatically
@@ -242,15 +244,29 @@ To maintain a safe, respectful, and inclusive community, OneColor employs **auto
 ### How it works:
 
 - Content is checked **at the point of submission** — before it is stored or visible to others
-- If restricted content is detected, the submission is **blocked** and the user is shown a message: *"Your message contains inappropriate content. Please revise and try again."*
+- If restricted content is detected, the submission is **blocked** and the user is shown a warning message
 - The original text is **not stored** when blocked
 - Content filtering applies equally to all users, including administrators
 - The filter does not read or scan content after it has been successfully submitted
 
+### Violation tracking & automatic account locking:
+
+Each time a user submits content that is blocked by the content filter, it is recorded as a **content violation** against their account. The violation count is stored in the user's account record.
+
+| Violation | What happens |
+|---|---|
+| **1st violation** | Content blocked. Warning shown with remaining attempts before account lock. |
+| **2nd violation** | Content blocked. Final warning shown — 1 more violation will lock the account. |
+| **3rd violation** | Content blocked. **Account is automatically locked.** User is signed out immediately. |
+
+- The **predefined lock reason** stored on the account is: *"Account locked: Repeated use of abusive or inappropriate language (3 violations)"*
+- Administrators can view the lock reason and violation count when reviewing the user's account through the support ticket system
+- When an administrator unlocks an account, the violation count is **reset to zero** and the lock reason is cleared, giving the user a fresh start
+- Admin and superadmin accounts are exempt from violation tracking and cannot be auto-locked
+
 ### Important notes:
 
-- Automated filtering may occasionally flag content incorrectly (false positives). If you believe your content was blocked in error, you can revise your wording and resubmit
-- Repeated attempts to submit restricted content may be considered a violation of community guidelines and could result in account restrictions
+- Automated filtering may occasionally flag content incorrectly (false positives). If you believe your content was blocked in error, you can revise your wording and resubmit. Each blocked submission counts as a violation regardless of intent
 - We do not use content filtering data for advertising, profiling, or any purpose other than community safety
 
 ---
@@ -261,8 +277,9 @@ OneColor may restrict or lock user accounts to protect the integrity of the plat
 
 ### When accounts may be locked:
 
-- **Automatic locking**: If a user attempts to change their blood group beyond the permitted limit, the account is automatically locked to prevent potential fraud
-- **Administrator action**: Administrators may lock accounts that violate community guidelines or exhibit suspicious behavior
+- **Blood group fraud prevention**: If a user attempts to change their blood group beyond the permitted limit, the account is automatically locked. Lock reason: *"Account locked: Blood group change violation — exceeded allowed change limit"*
+- **Repeated content violations**: If a user triggers the content filter **3 times**, the account is automatically locked. Lock reason: *"Account locked: Repeated use of abusive or inappropriate language (3 violations)"*
+- **Administrator action**: Administrators may manually lock accounts that violate community guidelines or exhibit suspicious behavior
 
 ### What happens when an account is locked:
 
@@ -283,8 +300,10 @@ OneColor may restrict or lock user accounts to protect the integrity of the plat
 
 - Locked users can communicate with administrators through the support ticket system
 - An administrator reviews the case and may unlock the account
-- When an account is unlocked, the App **automatically detects the change** (within approximately 10 seconds) and restores full access without requiring the user to log out or restart the App
-- The associated support ticket is automatically resolved when an account is unlocked
+- When an account is unlocked:
+  - The **content violation count is reset to zero** and the **lock reason is cleared**
+  - The App **automatically detects the change** (within approximately 10 seconds) and restores full access without requiring the user to log out or restart the App
+  - The associated support ticket is automatically resolved
 
 ### One-ticket limit:
 
@@ -463,6 +482,8 @@ By creating an account and using the OneColor App, you acknowledge that you have
 - The delivery of push notifications related to blood donation requests (if you grant notification permission)
 - The storage and processing of your data on servers that may be located outside your country of residence
 - Automated content moderation and filtering of all user-generated text for community safety
+- Tracking of content filter violations per account, with automatic account locking after 3 violations
 - Account restrictions (including read-only mode and limited feature access) in response to policy violations or suspicious activity
+- The storage of predefined lock reasons on your account record, visible to administrators
 - The logging of blood group change attempts for fraud prevention purposes
-- Administrator access to your account and profile data when investigating support tickets
+- Administrator access to your account and profile data (including violation count and lock reason) when investigating support tickets
