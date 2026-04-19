@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated:** April 12, 2026
+**Last Updated:** April 19, 2026
 
 **OneColor** ("we," "our," or "us") operates the OneColor mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you consent to the practices described herein.
 
@@ -119,8 +119,8 @@ We use the information we collect for the following purposes:
 - **Community Feed:** Display posts, blood request posts, reposts, and comments to the community
 - **Help Offer Tracking:** Record when donors offer help on blood request posts, and display the count of helpers to the community
 - **Messaging:** Enable direct messaging between users, including sharing posts in conversations
-- **Follow System:** Allow users to follow donors and receive updates
-- **Contact Requests:** Manage contact information sharing — your phone and email are only revealed after you explicitly accept a contact request
+- **Follow System:** Allow users to follow donors and receive updates. If your profile is set to **Public**, follows are approved instantly. If your profile is set to **Private**, follow requests require your explicit approval before the follower can see your posts
+- **Contact Requests:** When email and/or phone number are set to **Private**, other users may send a contact request. Your private contact details are revealed only after you **explicitly accept** that request. Contact fields set to **Public** are visible to everyone regardless of follow or request status
 - **Eligibility Tracking:** Calculate and display your blood donation eligibility based on your donation history and medical information, following Canadian Blood Services guidelines
 - **Safety & Compliance:** Ensure users meet minimum eligibility criteria (age 18–65, weight ≥45 kg, no permanent deferrals)
 - **Content Moderation:** Automatically filter and block abusive, offensive, threatening, discriminatory, sexual, or otherwise inappropriate language across all user-generated text in the App — including posts, comments, messages, profile fields, support tickets, and repost captions. This includes detection of profanity in multiple languages (English, Hindi/Urdu), hate speech, slurs, violent threats, explicit content, offensive emojis, and evasion attempts using character substitution (leetspeak)
@@ -138,7 +138,7 @@ We use the information we collect for the following purposes:
 
 ### 3.1 With Other Users
 
-When you register as a blood donor, the following information may be visible to other registered users:
+When you register as a blood donor, the following information is always visible to other registered users:
 
 - First name and last name
 - Blood group
@@ -147,11 +147,34 @@ When you register as a blood donor, the following information may be visible to 
 - Gender
 - Profile photo (if uploaded)
 - Bio (if provided)
-- Posts and blood request posts you create (including urgency, blood group needed, component, hospital, and units)
+- Your follower count, following count, and post count
 - Number of people who offered help on your blood request posts
-- Your follower and following counts
 
-**Your email address and phone number are NEVER publicly visible.** They are only shared with users whose contact requests you have **explicitly accepted**.
+#### Profile & Post Visibility
+
+Post visibility and follow approval are controlled by the **Public Profile** setting in your Privacy Settings:
+
+| | Public Profile ON | Public Profile OFF |
+|---|---|---|
+| **Posts** | Visible to everyone | Visible only to mutual followers |
+| **Follow requests** | Approved instantly — no action needed | Require your explicit approval |
+
+#### Contact Information Visibility
+
+Email address and phone number visibility are controlled **independently** through your Privacy Settings. Each field has its own toggle:
+
+| Contact Field | Setting | Who Can See It |
+|---|---|---|
+| **Email** | Public | Everyone — no follow or request needed |
+| **Email** | Private | Only mutual followers, or users whose contact request you have accepted |
+| **Phone** | Public | Everyone — no follow or request needed |
+| **Phone** | Private | Only mutual followers, or users whose contact request you have accepted |
+
+**Important:** A **Public Profile** does **not** automatically expose your email or phone number. Contact field visibility is a completely independent control. You can have a public profile with private contact details, or a private profile with a public phone number — each setting is yours to control.
+
+When one or both contact fields are private, other users will see a **"Request Contact Info"** button on your profile. Sending a request notifies you, and the private details are revealed only after **you explicitly accept** that request.
+
+All contact fields are **private by default**. You must actively enable public visibility for any contact field to be shown to others.
 
 ### 3.2 With Service Providers
 
@@ -383,7 +406,7 @@ You have the following rights regarding your personal information:
 - **Delete:** Request complete deletion of your account and all associated data by contacting us
 - **Withdraw Consent:** Stop using the App at any time; decline follow and contact requests
 - **Notification Control:** Enable or disable push notifications at any time through your device settings
-- **Contact Privacy:** Your phone number and email are hidden by default and only shared when you explicitly accept a contact request
+- **Contact Privacy:** Control your email and phone visibility independently through **Privacy Settings**. Each field can be set to Public (visible to everyone) or Private (visible only to mutual followers or users whose contact request you have accepted). All contact fields are **private by default** — you must actively enable public visibility
 - **Data Portability:** Request a copy of your personal data in a structured format
 - **Photo Removal:** Delete your profile photo at any time through the App
 - **Support:** Contact administrators through the in-app support ticket system for any account-related concerns
